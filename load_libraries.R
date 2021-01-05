@@ -4,10 +4,5 @@ load_packages <- function(x){
     install.packages(packages[!installed_packages])
   }
   
-  outdated_packages <- packages %in% rownames(old.packages())
-  if (any(outdated_packages == T)){
-    install.packages(packages[outdated_packages])
-    }
-  
   invisible(lapply(packages, library, character.only = TRUE))
 }
