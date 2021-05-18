@@ -1,4 +1,4 @@
-prepare_libraries <- function(x){
+prepare_libraries <- function(packages){
   installed_packages <- packages %in% rownames(installed.packages())
   if (any(installed_packages == F)){
     install.packages(packages[!installed_packages])
