@@ -11,5 +11,3 @@ prepare_libraries <- function(packages){
   
   invisible(lapply(packages, library, character.only = TRUE))
 }
-
-library(tidyverse)
